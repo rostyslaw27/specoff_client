@@ -1,6 +1,7 @@
 import { Navigate, Route, Routes } from 'react-router-dom'
 import Client from '../pages/Client'
 import Clients from '../pages/Clients'
+import Main from '../pages/Main'
 import Solutions from '../pages/Solutions'
 
 const AppRouter = () => {
@@ -15,6 +16,7 @@ const AppRouter = () => {
 
   return (
     <Routes>
+      <Route element={<Main />} path="/" />
       <Route element={<ClientsRoute />} path="/clients/*" />
       <Route element={<Solutions />} path="/solutions" />
       <Route element={<Navigate to="/clients" />} path="*" />
